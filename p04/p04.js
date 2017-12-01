@@ -19,6 +19,8 @@ function getCanvasInfo(e) {
 }
 
 document.addEventListener('mousedown', function (e) {
+    if (e.target.id !== 'canvas') return;
+
     // 処理
     if (e.button === 0) {
         var canvasInfo = getCanvasInfo(e);

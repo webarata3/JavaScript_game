@@ -24,8 +24,6 @@ document.addEventListener('mousedown', function (e) {
 });
 
 document.addEventListener('mousemove', function (e) {
-    if (e.target.id !== 'canvas') return;
-
     // 処理
     if (e.button === 0) {
         if (!isClick) return;
@@ -42,7 +40,5 @@ document.addEventListener('mousemove', function (e) {
 });
 
 document.addEventListener('mouseup', function (e) {
-    if (e.target.id !== 'canvas') return;
-
     isClick = false;
 });
