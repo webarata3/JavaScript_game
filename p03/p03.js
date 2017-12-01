@@ -4,7 +4,7 @@ var ctx = canvas.getContext('2d');
 var canvasWidth = canvas.width;
 var canvasHeight = canvas.height;
 
-var isClick = false;
+var drawing = false;
 
 document.addEventListener('mousedown', function (e) {
     if (e.target.id !== 'canvas') return;
@@ -19,14 +19,14 @@ document.addEventListener('mousedown', function (e) {
 
         ctx.beginPath();
         ctx.moveTo(canvasX, canvasY);
-        isClick = true;
+        drawing = true;
     }
 });
 
 document.addEventListener('mousemove', function (e) {
     // 処理
     if (e.button === 0) {
-        if (!isClick) return;
+        if (!drawing) return;
 
         var rect = e.target.getBoundingClientRect();
         var canvasX = e.clientX - rect.left;
@@ -40,5 +40,5 @@ document.addEventListener('mousemove', function (e) {
 });
 
 document.addEventListener('mouseup', function (e) {
-    isClick = false;
+    drawing = false;
 });

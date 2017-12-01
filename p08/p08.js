@@ -4,7 +4,7 @@ var ctx = canvas.getContext('2d');
 var canvasWidth = canvas.width;
 var canvasHeight = canvas.height;
 
-var isClick = false;
+var drawing = false;
 
 function getCanvasInfo(e) {
     var canvasInfo = {};
@@ -28,14 +28,14 @@ document.addEventListener('mousedown', function(e) {
 
         ctx.beginPath();
         ctx.moveTo(canvasInfo.canvasX, canvasInfo.canvasY);
-        isClick = true;
+        drawing = true;
     }
 });
 
 document.addEventListener('mousemove', function(e) {
     // 処理
     if (e.button === 0) {
-        if (!isClick) return;
+        if (!drawing) return;
 
         var canvasInfo = getCanvasInfo(e);
         if (!canvasInfo.inCanvas) return;
@@ -46,7 +46,7 @@ document.addEventListener('mousemove', function(e) {
 });
 
 document.addEventListener('mouseup', function(e) {
-    isClick = false;
+    drawing = false;
 });
 
 var colorList = document.querySelectorAll('[name="color"]');
@@ -82,7 +82,7 @@ var lineWidth = document.getElementById('lineWidth');
 lineWidth.addEventListener('change', function(e) {
     var num = e.target.value;
     if (!isNumber(num)) return;
-    var lineWidthValue = Number.parseInt(num);
+    var lineWidthValue = parseInt(num);
     if (lineWidthValue < 1 || lineWidthValue > 100) return;
     ctx.lineWidth = lineWidthValue;
 });
@@ -91,7 +91,7 @@ var opacity = document.getElementById('opacity');
 opacity.addEventListener('change', function(e) {
     var num = e.target.value;
     if (!isNumber(num)) return;
-    var opacityValue = Number.parseInt(num);
+    var opacityValue = parseFloat(num);
     if (opacityValue < 0 || opacityValue > 1) return;
     ctx.globalAlpha = opacityValue;
 });
