@@ -50,6 +50,20 @@ document.addEventListener('mouseup', function (e) {
 var colorList = document.querySelectorAll('[name="color"]');
 for (var i = 0; i < colorList.length; i++) {
     colorList[i].addEventListener('click', function(e) {
-        alert(e.target.value);
+        var color = e.target.value;
+        switch (color) {
+            case 'black':
+                ctx.strokeStyle = '#000';
+                break;
+            case 'red':
+                ctx.strokeStyle = '#f00';
+                break;
+            case 'green':
+                ctx.strokeStyle = '#0f0';
+                break;
+            case 'blue':
+                ctx.strokeStyle = '#00f';
+                break;
+        }
     });
 }

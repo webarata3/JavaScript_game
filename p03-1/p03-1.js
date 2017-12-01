@@ -46,10 +46,3 @@ document.addEventListener('mousemove', function (e) {
 document.addEventListener('mouseup', function (e) {
     isClick = false;
 });
-
-var colorList = document.querySelectorAll('[name="color"]');
-for (var i = 0; i < colorList.length; i++) {
-    colorList[i].addEventListener('click', function(e) {
-        alert(e.target.value);
-    });
-}
