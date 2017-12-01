@@ -4,6 +4,8 @@ var ctx = canvas.getContext('2d');
 var canvasWidth = canvas.width;
 var canvasHeight = canvas.height;
 
+var beforeX;
+var beforeY;
 var drawing = false;
 
 function getCanvasInfo(e) {
@@ -26,8 +28,8 @@ document.addEventListener('mousedown', function (e) {
         var canvasInfo = getCanvasInfo(e);
         if (!canvasInfo.inCanvas) return;
 
-        ctx.beginPath();
-        ctx.moveTo(canvasInfo.canvasX, canvasInfo.canvasY);
+        beforeX = canvasInfo.canvasX;
+        beforeY = canvasInfo.canvasY;
         drawing = true;
     }
 });
@@ -40,8 +42,13 @@ document.addEventListener('mousemove', function (e) {
         var canvasInfo = getCanvasInfo(e);
         if (!canvasInfo.inCanvas) return;
 
+        ctx.beginPath();
+        ctx.moveTo(beforeX, beforeY);
         ctx.lineTo(canvasInfo.canvasX, canvasInfo.canvasY);
         ctx.stroke();
+
+        beforeX = canvasInfo.canvasX;
+        beforeY = canvasInfo.canvasY;
     }
 });
 
