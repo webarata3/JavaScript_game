@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b208c91-a697-4053-9872-c131fac3b3e2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/paint2/p00/p00.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/paint2/p00/paint.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/paint2/p00/paint.js" afterPath="$PROJECT_DIR$/paint2/p00/paint.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,18 +20,8 @@
       <file leaf-file-name="paint.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/paint2/p00/paint.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="p00.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/paint2/p00/p00.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="328">
+              <caret line="131" column="11" lean-forward="true" selection-start-line="131" selection-start-column="11" selection-end-line="131" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -76,6 +65,12 @@
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -117,12 +112,6 @@
             <path>
               <item name="JavaScript_game" type="b2602c69:ProjectViewProjectNode" />
               <item name="JavaScript_game" type="462c0819:PsiDirectoryNode" />
-              <item name="paint" type="462c0819:PsiDirectoryNode" />
-              <item name="p01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaScript_game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaScript_game" type="462c0819:PsiDirectoryNode" />
               <item name="paint2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -153,8 +142,9 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -204,12 +194,12 @@
       <workItem from="1512467036727" duration="798000" />
       <workItem from="1512555704624" duration="35000" />
       <workItem from="1512627526255" duration="368000" />
-      <workItem from="1512762220182" duration="2782000" />
+      <workItem from="1512762220182" duration="6279000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42301000" />
+    <option name="totallyTimeSpent" value="45798000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="479" y="29" width="1400" height="1000" extended-state="0" />
@@ -257,6 +247,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -264,6 +255,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -309,6 +301,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -328,10 +321,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/paint/p14/paint.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/paint2/p00/paint.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        <state relative-caret-position="328">
+          <caret line="131" column="11" lean-forward="true" selection-start-line="131" selection-start-column="11" selection-end-line="131" selection-end-column="11" />
           <folding />
         </state>
       </provider>

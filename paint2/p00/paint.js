@@ -4,24 +4,71 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 const canvasState = {
-    drawing: false
+    drawing: false,
+    beforeX: 0,
+    beforeY: 0,
+    x: 0,
+    y: 0
 };
 
-const DRAW_TOOL_PEN = 'pen';
-const DRAW_TOOL_LINE = 'line';
-const DRAW_TOOL_CIRCLE = 'circle';
-const DRAW_TOOL_FILL_CIRCLE = 'fillCircle';
-const DRAW_TOOL_RECT = 'rect';
-const DRAW_TOOL_FILL_RECT = 'fillRect';
+const drawTool = {
+    pen: {
+        draw: function () {
+            ctx.beginPath();
+            ctx.moveTo(canvasState.beforeX, canvasState.beforeY);
+            ctx.lineTo(canvasState.x, canvasState.y);
+            ctx.stroke();
+            canvasState.beforeX = canvasState.x;
+            canvasState.beforeY = canvasState.y;
+        }
+    },
+    line: {
+        draw: function () {
+            ctx.putImageData(imageData, 0, 0);
+            ctx.beginPath();
+            ctx.moveTo(canvasState.beforeX, canvasState.beforeY);
+            ctx.lineTo(canvasState.x, canvasState.y);
+            ctx.stroke();
+        }
+    },
+    circle: {
+        draw: function () {
+            ctx.putImageData(imageData, 0, 0);
+            ctx.beginPath();
+            ctx.arc(canvasState.beforeX, canvasState.beforeY, Math.abs(canvasState.x - canvasState.beforeX), 0, Math.PI * 2, false);
+            ctx.stroke();
+        }
+    },
+    fillCircle: {
+        draw: function () {
+            ctx.putImageData(imageData, 0, 0);
+            ctx.beginPath();
+            ctx.arc(canvasState.beforeX, canvasState.beforeY, Math.abs(canvasState.x - canvasState.beforeX), 0, Math.PI * 2, false);
+            ctx.fill();
+        }
+    },
+    rect: {
+        draw: function () {
+            ctx.putImageData(imageData, 0, 0);
+            ctx.strokeRect(canvasState.beforeX, canvasState.beforeY, canvasState.x - canvasState.beforeX, canvasState.y - canvasState.beforeY);
+        }
+    },
+    fillRect: {
+        draw: function () {
+            ctx.putImageData(imageData, 0, 0);
+            ctx.fillRect(canvasState.beforeX, canvasState.beforeY, canvasState.x - canvasState.beforeX, canvasState.y - canvasState.beforeY);
+        }
+    }
+};
 
-var currentDrawTool = DRAW_TOOL_PEN;
+let currentDrawTool = 'pen';
 
-var imageData;
+let imageData;
 
 function changeCanvasState(e) {
     const rect = e.target.getBoundingClientRect();
-    canvasState.canvasX = e.clientX - rect.left;
-    canvasState.canvasY = e.clientY - rect.top;
+    canvasState.x = e.clientX - rect.left;
+    canvasState.y = e.clientY - rect.top;
 }
 
 canvas.addEventListener('mousedown', function (e) {
@@ -31,8 +78,8 @@ canvas.addEventListener('mousedown', function (e) {
 
         imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
-        canvasState.beforeX = canvasState.canvasX;
-        canvasState.beforeY = canvasState.canvasY;
+        canvasState.beforeX = canvasState.x;
+        canvasState.beforeY = canvasState.y;
         canvasState.drawing = true;
     }
 });
@@ -43,46 +90,7 @@ canvas.addEventListener('mousemove', function (e) {
 
     changeCanvasState(e);
 
-    if (currentDrawTool === DRAW_TOOL_LINE ||
-        currentDrawTool === DRAW_TOOL_CIRCLE ||
-        currentDrawTool === DRAW_TOOL_FILL_CIRCLE ||
-        currentDrawTool === DRAW_TOOL_RECT ||
-        currentDrawTool === DRAW_TOOL_FILL_RECT) {
-        ctx.putImageData(imageData, 0, 0);
-    }
-
-    switch (currentDrawTool) {
-        case DRAW_TOOL_PEN:
-            ctx.beginPath();
-            ctx.moveTo(canvasState.beforeX, canvasState.beforeY);
-            ctx.lineTo(canvasState.canvasX, canvasState.canvasY);
-            ctx.stroke();
-            canvasState.beforeX = canvasState.canvasX;
-            canvasState.beforeY = canvasState.canvasY;
-            break;
-        case DRAW_TOOL_LINE:
-            ctx.beginPath();
-            ctx.moveTo(canvasState.beforeX, canvasState.beforeY);
-            ctx.lineTo(canvasState.canvasX, canvasState.canvasY);
-            ctx.stroke();
-            break;
-        case DRAW_TOOL_CIRCLE:
-            ctx.beginPath();
-            ctx.arc(canvasState.beforeX, canvasState.beforeY, Math.abs(canvasState.canvasX - canvasState.beforeX), 0, Math.PI * 2, false);
-            ctx.stroke();
-            break;
-        case DRAW_TOOL_FILL_CIRCLE:
-            ctx.beginPath();
-            ctx.arc(canvasState.beforeX, canvasState.beforeY, Math.abs(canvasState.canvasX - canvasState.beforeX), 0, Math.PI * 2, false);
-            ctx.fill();
-            break;
-        case DRAW_TOOL_RECT:
-            ctx.strokeRect(canvasState.beforeX, canvasState.beforeY, canvasState.canvasX - canvasState.beforeX, canvasState.canvasY - canvasState.beforeY);
-            break;
-        case DRAW_TOOL_FILL_RECT:
-            ctx.fillRect(canvasState.beforeX, canvasState.beforeY, canvasState.canvasX - canvasState.beforeX, canvasState.canvasY - canvasState.beforeY);
-            break;
-    }
+    drawTool[currentDrawTool].draw();
 });
 
 canvas.addEventListener('mouseup', function (e) {
@@ -105,24 +113,24 @@ function isNumber(val) {
 
 const lineWidth = document.getElementById('lineWidth');
 lineWidth.addEventListener('change', function (e) {
-    var num = e.target.value;
+    const num = e.target.value;
     if (!isNumber(num)) return;
-    var lineWidthValue = parseInt(num, 10);
+    const lineWidthValue = parseInt(num, 10);
     if (lineWidthValue < 1 || lineWidthValue > 100) return;
     ctx.lineWidth = lineWidthValue;
 });
 
 const opacity = document.getElementById('opacity');
 opacity.addEventListener('change', function (e) {
-    var num = e.target.value;
+    const num = e.target.value;
     if (!isNumber(num)) return;
-    var opacityValue = parseFloat(num);
+    const opacityValue = parseFloat(num);
     if (opacityValue < 0 || opacityValue > 1) return;
     ctx.globalAlpha = opacityValue;
 });
 
 const drawToolList = document.querySelectorAll('[name="drawTool"]');
-for (var i = 0; i < drawToolList.length; i++) {
+for (let i = 0; i < drawToolList.length; i++) {
     drawToolList[i].addEventListener('click', function (e) {
         currentDrawTool = e.target.value;
     });
