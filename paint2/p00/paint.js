@@ -78,15 +78,14 @@ const drawTool = {
 };
 
 canvas.addEventListener('mousedown', function (e) {
-    if (e.button === 0) {
-        canvasState.setPos(e);
+    if (e.button !== 0) return;
+    canvasState.setPos(e);
 
-        canvasState.imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    canvasState.imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
-        canvasState.beforeX = canvasState.x;
-        canvasState.beforeY = canvasState.y;
-        canvasState.drawing = true;
-    }
+    canvasState.beforeX = canvasState.x;
+    canvasState.beforeY = canvasState.y;
+    canvasState.drawing = true;
 });
 
 canvas.addEventListener('mousemove', function (e) {
@@ -130,7 +129,7 @@ lineWidth.addEventListener('change', function (e) {
 });
 
 const lineWidthRange = document.getElementById('lineWidthRange')
-lineWidthRange.addEventListener('change', function(e) {
+lineWidthRange.addEventListener('change', function (e) {
     changeLineWidth(e);
     lineWidth.value = e.target.value;
 });
