@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b208c91-a697-4053-9872-c131fac3b3e2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/paint2/p07/paint.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/paint2/p07/paint.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/paint2/p07/style.css" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/paint2/p08/paint.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/paint2/p08/paint.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/paint2/p08/style.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,31 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="paint.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/paint2/p07/paint.js">
+      <file leaf-file-name="paint.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/paint2/p08/paint.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="485">
-              <caret line="64" column="5" lean-forward="false" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="paint.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/paint2/p00/paint.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="115" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="paint.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/paint2/p07/paint.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="74" lean-forward="false" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
+              <caret line="76" column="5" lean-forward="false" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -52,8 +31,8 @@
       <file leaf-file-name="paint.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/paint2/p00/paint.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="64" column="5" lean-forward="false" selection-start-line="48" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+            <state relative-caret-position="374">
+              <caret line="76" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -110,6 +89,8 @@
         <option value="$PROJECT_DIR$/paint2/p06/paint.js" />
         <option value="$PROJECT_DIR$/paint2/p07/paint.js" />
         <option value="$PROJECT_DIR$/paint2/p07/paint.html" />
+        <option value="$PROJECT_DIR$/paint2/p08/paint.html" />
+        <option value="$PROJECT_DIR$/paint2/p08/paint.js" />
       </list>
     </option>
   </component>
@@ -174,7 +155,7 @@
               <item name="JavaScript_game" type="b2602c69:ProjectViewProjectNode" />
               <item name="JavaScript_game" type="462c0819:PsiDirectoryNode" />
               <item name="paint2" type="462c0819:PsiDirectoryNode" />
-              <item name="p07" type="462c0819:PsiDirectoryNode" />
+              <item name="p08" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -240,12 +221,12 @@
       <workItem from="1512467036727" duration="798000" />
       <workItem from="1512555704624" duration="35000" />
       <workItem from="1512627526255" duration="368000" />
-      <workItem from="1512762220182" duration="19800000" />
+      <workItem from="1512762220182" duration="19867000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59319000" />
+    <option name="totallyTimeSpent" value="59386000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="479" y="29" width="1400" height="1000" extended-state="0" />
@@ -281,8 +262,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/p10/paint.js" />
-    <entry file="file://$PROJECT_DIR$/p10/p10.html" />
     <entry file="file://$PROJECT_DIR$/p10/paint.js" />
     <entry file="file://$PROJECT_DIR$/p10/p10.html" />
     <entry file="file://$PROJECT_DIR$/01/01.html" />
@@ -467,14 +446,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/paint2/p00/paint.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="64" column="5" lean-forward="false" selection-start-line="48" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/paint2/p07/paint.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="485">
@@ -483,18 +454,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/paint2/p00/paint.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="115" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/paint2/p07/paint.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="74" lean-forward="false" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paint2/p00/paint.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paint2/p08/paint.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="114" lean-forward="false" selection-start-line="14" selection-start-column="114" selection-end-line="14" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paint2/p00/paint.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="76" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paint2/p08/paint.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="76" column="5" lean-forward="false" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
           <folding />
         </state>
       </provider>
