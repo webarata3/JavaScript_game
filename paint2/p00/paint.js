@@ -4,11 +4,18 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 const canvasState = {
+    currentDrawTool: 'pen',
+    imageData: null,
     drawing: false,
     beforeX: 0,
     beforeY: 0,
     x: 0,
-    y: 0
+    y: 0,
+    movePath: function(e) {
+        const rect = e.target.getBoundingClientRect();
+        canvasState.x = e.clientX - rect.left;
+        canvasState.y = e.clientY - rect.top;
+    }
 };
 
 const drawTool = {
@@ -24,7 +31,7 @@ const drawTool = {
     },
     line: {
         draw: function () {
-            ctx.putImageData(imageData, 0, 0);
+            ctx.putImageData(canvasState.imageData, 0, 0);
             ctx.beginPath();
             ctx.moveTo(canvasState.beforeX, canvasState.beforeY);
             ctx.lineTo(canvasState.x, canvasState.y);
@@ -33,7 +40,7 @@ const drawTool = {
     },
     circle: {
         draw: function () {
-            ctx.putImageData(imageData, 0, 0);
+            ctx.putImageData(canvasState.imageData, 0, 0);
             ctx.beginPath();
             ctx.arc(canvasState.beforeX, canvasState.beforeY, Math.abs(canvasState.x - canvasState.beforeX), 0, Math.PI * 2, false);
             ctx.stroke();
@@ -41,7 +48,7 @@ const drawTool = {
     },
     fillCircle: {
         draw: function () {
-            ctx.putImageData(imageData, 0, 0);
+            ctx.putImageData(canvasState.imageData, 0, 0);
             ctx.beginPath();
             ctx.arc(canvasState.beforeX, canvasState.beforeY, Math.abs(canvasState.x - canvasState.beforeX), 0, Math.PI * 2, false);
             ctx.fill();
@@ -49,34 +56,24 @@ const drawTool = {
     },
     rect: {
         draw: function () {
-            ctx.putImageData(imageData, 0, 0);
+            ctx.putImageData(canvasState.imageData, 0, 0);
             ctx.strokeRect(canvasState.beforeX, canvasState.beforeY, canvasState.x - canvasState.beforeX, canvasState.y - canvasState.beforeY);
         }
     },
     fillRect: {
         draw: function () {
-            ctx.putImageData(imageData, 0, 0);
+            ctx.putImageData(canvasState.imageData, 0, 0);
             ctx.fillRect(canvasState.beforeX, canvasState.beforeY, canvasState.x - canvasState.beforeX, canvasState.y - canvasState.beforeY);
         }
     }
 };
 
-let currentDrawTool = 'pen';
-
-let imageData;
-
-function changeCanvasState(e) {
-    const rect = e.target.getBoundingClientRect();
-    canvasState.x = e.clientX - rect.left;
-    canvasState.y = e.clientY - rect.top;
-}
-
 canvas.addEventListener('mousedown', function (e) {
     // 処理
     if (e.button === 0) {
-        changeCanvasState(e);
+        canvasState.movePath(e);
 
-        imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        canvasState.imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
         canvasState.beforeX = canvasState.x;
         canvasState.beforeY = canvasState.y;
@@ -88,9 +85,9 @@ canvas.addEventListener('mousemove', function (e) {
     // 処理
     if (!canvasState.drawing) return;
 
-    changeCanvasState(e);
+    canvasState.movePath(e);
 
-    drawTool[currentDrawTool].draw();
+    drawTool[canvasState.currentDrawTool].draw();
 });
 
 canvas.addEventListener('mouseup', function (e) {
@@ -132,6 +129,6 @@ opacity.addEventListener('change', function (e) {
 const drawToolList = document.querySelectorAll('[name="drawTool"]');
 for (let i = 0; i < drawToolList.length; i++) {
     drawToolList[i].addEventListener('click', function (e) {
-        currentDrawTool = e.target.value;
+        canvasState.currentDrawTool = e.target.value;
     });
 }
