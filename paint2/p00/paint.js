@@ -78,7 +78,6 @@ const drawTool = {
 };
 
 canvas.addEventListener('mousedown', function (e) {
-    // 処理
     if (e.button === 0) {
         canvasState.setPos(e);
 
@@ -91,7 +90,6 @@ canvas.addEventListener('mousedown', function (e) {
 });
 
 canvas.addEventListener('mousemove', function (e) {
-    // 処理
     if (!canvasState.drawing) return;
 
     canvasState.setPos(e);

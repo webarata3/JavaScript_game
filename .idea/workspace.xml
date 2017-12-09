@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b208c91-a697-4053-9872-c131fac3b3e2" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/paint2/p01/p01.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/paint2/p01/paint.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/paint2/p01/style.css" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/paint2/p00/p00.html" afterPath="$PROJECT_DIR$/paint2/p00/p00.html" />
       <change beforePath="$PROJECT_DIR$/paint2/p00/paint.js" afterPath="$PROJECT_DIR$/paint2/p00/paint.js" />
+      <change beforePath="$PROJECT_DIR$/paint2/p00/style.css" afterPath="$PROJECT_DIR$/paint2/p00/style.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,21 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="p00.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/paint2/p00/p00.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="77" lean-forward="false" selection-start-line="19" selection-start-column="77" selection-end-line="19" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="paint.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/paint2/p00/paint.js">
+        <entry file="file://$PROJECT_DIR$/paint2/p01/paint.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+            <state relative-caret-position="221">
+              <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -70,9 +63,12 @@
         <option value="$PROJECT_DIR$/p11/p11.html" />
         <option value="$PROJECT_DIR$/p11/paint.js" />
         <option value="$PROJECT_DIR$/tamayoke/t00/tamayoke.js" />
-        <option value="$PROJECT_DIR$/paint2/p00/style.css" />
         <option value="$PROJECT_DIR$/paint2/p00/p00.html" />
+        <option value="$PROJECT_DIR$/paint2/p01/p01.html" />
+        <option value="$PROJECT_DIR$/paint2/p01/style.css" />
+        <option value="$PROJECT_DIR$/paint2/p00/style.css" />
         <option value="$PROJECT_DIR$/paint2/p00/paint.js" />
+        <option value="$PROJECT_DIR$/paint2/p01/paint.js" />
       </list>
     </option>
   </component>
@@ -133,6 +129,12 @@
               <item name="paint2" type="462c0819:PsiDirectoryNode" />
               <item name="p00" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="JavaScript_game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaScript_game" type="462c0819:PsiDirectoryNode" />
+              <item name="paint2" type="462c0819:PsiDirectoryNode" />
+              <item name="p01" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -150,6 +152,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game\paint2\p01" />
       <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game\paint2\p00" />
       <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game" />
       <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game\image" />
@@ -196,12 +199,12 @@
       <workItem from="1512467036727" duration="798000" />
       <workItem from="1512555704624" duration="35000" />
       <workItem from="1512627526255" duration="368000" />
-      <workItem from="1512762220182" duration="14199000" />
+      <workItem from="1512762220182" duration="14686000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53718000" />
+    <option name="totallyTimeSpent" value="54205000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="479" y="29" width="1400" height="1000" extended-state="0" />
@@ -209,12 +212,12 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39955106" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -315,14 +318,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/paint2/p00/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/canvas/05/05.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -347,10 +342,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/paint2/p01/p01.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paint2/p01/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paint2/p00/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/paint2/p00/paint.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        <state relative-caret-position="-187">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="16" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paint2/p01/paint.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
           <folding />
         </state>
       </provider>
