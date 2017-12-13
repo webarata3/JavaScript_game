@@ -25,7 +25,7 @@ function random(num) {
 
 function fillTextCenter(text, y) {
     let metrics = ctx.measureText(text);
-    ctx.fillText(text, (CANVAS_WIDTH - metrics.width) / 2, y);
+    ctx.fillText(text, (canvasWidth - metrics.width) / 2, y);
 }
 
 class Robot {
@@ -93,8 +93,7 @@ function init() {
     canvasWidth = canvas.width;
     canvasHeight = canvas.height;
 
-    window.addEventListener('keyup', keyup);
-    window.addEventListener('keydown', keydown);
+    registerEvent();
 
     score = 0;
     missileSpeed = INIT_MISSILE_SPEED;
@@ -106,6 +105,37 @@ function init() {
     for (let i = 0; i < MISSILE_NUM; i++) {
         missiles[i] = new Missile(i);
     }
+}
+
+function registerEvent() {
+    window.addEventListener('keyup', function(e) {
+        // 左37 右39
+        switch (e.keyCode) {
+            case 37:
+                robot.pushLeft = false;
+                break;
+            case 39:
+                robot.pushRight = false;
+                break;
+        }
+    });
+
+    window.addEventListener('keydown', function(e) {
+        // 左37 右39
+        switch (e.keyCode) {
+            case 32:
+                if (robot.hit) {
+                    init();
+                }
+                break;
+            case 37:
+                robot.pushLeft = true;
+                break;
+            case 39:
+                robot.pushRight = true;
+                break;
+        }
+    });
 }
 
 function mainLoop() {
@@ -153,35 +183,6 @@ function draw() {
         ctx.strokeStyle = '#000';
         fillTextCenter('Game Over', 100);
         fillTextCenter('スペースキーでリスタート', 150);
-    }
-}
-
-function keyup(e) {
-    // 左37 右39
-    switch (e.keyCode) {
-        case 37:
-            robot.pushLeft = false;
-            break;
-        case 39:
-            robot.pushRight = false;
-            break;
-    }
-}
-
-function keydown(e) {
-    // 左37 右39
-    switch (e.keyCode) {
-        case 32:
-            if (robot.hit) {
-                init();
-            }
-            break;
-        case 37:
-            robot.pushLeft = true;
-            break;
-        case 39:
-            robot.pushRight = true;
-            break;
     }
 }
 
