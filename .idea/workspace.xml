@@ -2,6 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b208c91-a697-4053-9872-c131fac3b3e2" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t00/tamayoke.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t00/tamayoke.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t01/tamayoke.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t01/tamayoke.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t02/tamayoke.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t02/tamayoke.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t03/tamayoke.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t03/tamayoke.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t04/tamayoke.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t04/tamayoke.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t05/tamayoke.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t05/tamayoke.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t06/tamayoke.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t06/tamayoke.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t07/tamayoke.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t07/tamayoke.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t08/tamayoke.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t08/tamayoke.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t09/tamayoke.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/tamayoke2/t09/tamayoke.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -16,11 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="paint.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/paint3/p00/paint.js">
+      <file leaf-file-name="tamayoke.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/canvas/tamayoke2/t00/tamayoke.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -95,7 +115,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="443" />
     <option name="y" value="36" />
     <option name="width" value="1400" />
@@ -127,19 +147,7 @@
             <path>
               <item name="JavaScript_game" type="b2602c69:ProjectViewProjectNode" />
               <item name="JavaScript_game" type="462c0819:PsiDirectoryNode" />
-              <item name="paint3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaScript_game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaScript_game" type="462c0819:PsiDirectoryNode" />
-              <item name="paint3" type="462c0819:PsiDirectoryNode" />
-              <item name="p00" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaScript_game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaScript_game" type="462c0819:PsiDirectoryNode" />
-              <item name="paint3" type="462c0819:PsiDirectoryNode" />
-              <item name="p01" type="462c0819:PsiDirectoryNode" />
+              <item name="tamayoke2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -161,11 +169,11 @@
       <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game\tamayoke2" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game\canvas" />
+      <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game\paint" />
       <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game" />
       <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game\tamayoke\t02" />
       <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game\paint2" />
-      <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game\paint2\p02" />
-      <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game\paint2\p01" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -211,18 +219,17 @@
       <workItem from="1512762220182" duration="34218000" />
       <workItem from="1513071967143" duration="107000" />
       <workItem from="1513161611609" duration="6000" />
-      <workItem from="1513161645346" duration="2235000" />
+      <workItem from="1513161645346" duration="4808000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76085000" />
+    <option name="totallyTimeSpent" value="78658000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="443" y="36" width="1400" height="1000" extended-state="1" />
-    <editor active="true" />
+    <frame x="443" y="36" width="1400" height="1000" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -271,16 +278,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/01.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="56" column="21" lean-forward="false" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p03/p03.html" />
-    <entry file="file://$PROJECT_DIR$/p01/paint.js" />
-    <entry file="file://$PROJECT_DIR$/p06/p06.html" />
     <entry file="file://$PROJECT_DIR$/p07/p07.html" />
     <entry file="file://$PROJECT_DIR$/p08/p08.html" />
     <entry file="file://$PROJECT_DIR$/p05/paint.js" />
@@ -481,13 +478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tamayoke2/t00/t00.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tamayoke2/t00/tamayoke.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -498,7 +488,47 @@
     <entry file="file://$PROJECT_DIR$/paint3/p00/paint.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paint/p15/p15.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tamayoke2/t00/t00.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tamayoke2/t03/tamayoke.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tamayoke2/t03/tamayoke.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canvas/tamayoke2/t00/tamayoke.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

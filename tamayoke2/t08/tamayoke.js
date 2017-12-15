@@ -15,9 +15,7 @@ let hiScore = 0;
 
 let missiles = [];
 const MISSILE_NUM = 5;
-const INIT_MISSILE_SPEED = 3;
-let missileSpeed;
-const INCREASE_MISSILE_SPEED = 1.05;
+let missileSpeed = 3;
 
 function random(num) {
     return Math.floor(Math.random() * num);
@@ -76,11 +74,8 @@ class Missile {
         this.y = this.y + missileSpeed;
         if (this.y > canvasHeight) {
             this.x = random(canvasWidth - this.width);
-            this.y = -this.height - random(20);
+            this.y = -this.height;
             score = score + 1;
-            if (score % 10 === 0) {
-                missileSpeed = missileSpeed * INCREASE_MISSILE_SPEED;
-            }
         }
     }
 }
@@ -97,7 +92,6 @@ function init() {
 
 function initGame() {
     score = 0;
-    missileSpeed = INIT_MISSILE_SPEED;
 
     robot = new Robot();
 

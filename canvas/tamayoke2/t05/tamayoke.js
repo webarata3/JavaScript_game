@@ -11,6 +11,14 @@ let canvasHeight;
 let timer;
 let robot;
 
+let missiles = [];
+const MISSILE_NUM = 5;
+let missileSpeed = 3;
+
+function random(num) {
+    return Math.floor(Math.random() * num);
+}
+
 class Robot {
     constructor() {
         this.width = 30;
@@ -36,6 +44,32 @@ class Robot {
             }
         }
     }
+
+    checkHit(missile) {
+        if (!((this.x > missile.x + missile.width
+                || this.x + this.width < missile.x)
+                || (this.y > missile.y + missile.height
+                    || this.y + this.height < missile.y))) {
+            this.hit = true;
+        }
+    }
+}
+
+class Missile {
+    constructor(order) {
+        this.width = 5;
+        this.height = 20;
+        this.x = random(canvasWidth - this.width);
+        this.y = -order * (this.height + 50);
+    }
+
+    move() {
+        this.y = this.y + missileSpeed;
+        if (this.y > canvasHeight) {
+            this.x = random(canvasWidth - this.width);
+            this.y = -this.height;
+        }
+    }
 }
 
 function init() {
@@ -46,6 +80,10 @@ function init() {
     canvasHeight = canvas.height;
 
     robot = new Robot();
+
+    for (let i = 0; i < MISSILE_NUM; i++) {
+        missiles[i] = new Missile(i);
+    }
 
     registerEvent();
 
@@ -82,6 +120,12 @@ function registerEvent() {
 function mainLoop() {
     robot.move();
 
+    missiles.forEach(function(missile) {
+        missile.move();
+        robot.checkHit(missile);
+    });
+
+
     draw();
 }
 
@@ -91,6 +135,15 @@ function draw() {
 
     ctx.fillStyle = '#00f';
     ctx.fillRect(robot.x, robot.y, robot.width, robot.height);
+
+    ctx.fillStyle = '#f00';
+    missiles.forEach(function(missile) {
+        ctx.fillRect(missile.x, missile.y, missile.width, missile.height);
+    });
+
+    if (robot.hit) {
+        clearInterval(timer);
+    }
 }
 
 init();
