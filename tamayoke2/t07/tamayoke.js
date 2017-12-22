@@ -33,6 +33,7 @@ class Robot {
         this.y = canvasHeight - this.height;
         this.pushLeft = false;
         this.pushRight = false;
+        this.hit = false;
         this.speed = 5;
     }
 

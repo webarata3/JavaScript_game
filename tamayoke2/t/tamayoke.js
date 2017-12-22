@@ -11,11 +11,13 @@ let canvasHeight;
 let timer;
 let robot;
 let score;
-let hiScore = 0;
+let highScore = 0;
 
 let missiles = [];
 const MISSILE_NUM = 5;
-let missileSpeed = 3;
+const INIT_MISSILE_SPEED = 3;
+let missileSpeed;
+const INCREASE_MISSILE_SPEED = 1.05;
 
 function random(num) {
     return Math.floor(Math.random() * num);
@@ -34,6 +36,7 @@ class Robot {
         this.y = canvasHeight - this.height;
         this.pushLeft = false;
         this.pushRight = false;
+        this.hit = false;
         this.speed = 5;
     }
 
@@ -51,7 +54,6 @@ class Robot {
             }
         }
     }
-
     checkHit(missile) {
         if (!((this.x > missile.x + missile.width
                 || this.x + this.width < missile.x)
@@ -74,8 +76,11 @@ class Missile {
         this.y = this.y + missileSpeed;
         if (this.y > canvasHeight) {
             this.x = random(canvasWidth - this.width);
-            this.y = -this.height;
+            this.y = -this.height - random(20);
             score = score + 1;
+            if (score % 10 === 0) {
+                missileSpeed = missileSpeed * INCREASE_MISSILE_SPEED;
+            }
         }
     }
 }
@@ -92,6 +97,7 @@ function init() {
 
 function initGame() {
     score = 0;
+    missileSpeed = INIT_MISSILE_SPEED;
 
     robot = new Robot();
 
@@ -144,8 +150,8 @@ function mainLoop() {
         robot.checkHit(missile);
     });
 
-    if (score > hiScore) {
-        hiScore = score;
+    if (score > highScore) {
+        highScore = score;
     }
 
     draw();
@@ -161,7 +167,7 @@ function draw() {
 
     ctx.fillStyle = '#000';
     ctx.font = '10px sans-serif';
-    ctx.fillText('ハイスコア: ' + hiScore, 5, 50);
+    ctx.fillText('ハイスコア: ' + highScore, 5, 50);
 
     ctx.fillStyle = '#00f';
     ctx.fillRect(robot.x, robot.y, robot.width, robot.height);

@@ -11,7 +11,7 @@ let canvasHeight;
 let timer;
 let robot;
 let score;
-let hiScore = 0;
+let highScore = 0;
 
 let missiles = [];
 const MISSILE_NUM = 5;
@@ -34,6 +34,7 @@ class Robot {
         this.y = canvasHeight - this.height;
         this.pushLeft = false;
         this.pushRight = false;
+        this.hit = false;
         this.speed = 5;
     }
 
@@ -144,8 +145,8 @@ function mainLoop() {
         robot.checkHit(missile);
     });
 
-    if (score > hiScore) {
-        hiScore = score;
+    if (score > highScore) {
+        highScore = score;
     }
 
     draw();
@@ -161,7 +162,7 @@ function draw() {
 
     ctx.fillStyle = '#000';
     ctx.font = '10px sans-serif';
-    ctx.fillText('ハイスコア: ' + hiScore, 5, 50);
+    ctx.fillText('ハイスコア: ' + highScore, 5, 50);
 
     ctx.fillStyle = '#00f';
     ctx.fillRect(robot.x, robot.y, robot.width, robot.height);
