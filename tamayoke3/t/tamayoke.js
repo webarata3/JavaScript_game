@@ -121,6 +121,7 @@ class Model {
         this._canvasHeight = canvasHeight;
 
         this._highScore = 0;
+        this._firstTime = true;
     }
 
     _initGame() {
@@ -196,6 +197,10 @@ class Model {
         }
     }
 
+    isFirstTime() {
+        return this._firstTime;
+    }
+
     isHit() {
         return this._robot.isHit();
     }
@@ -205,7 +210,8 @@ class Model {
     }
 
     restart() {
-        if (this._robot.isHit()) {
+        if (this._firstTime || this._robot.isHit()) {
+            this._firstTime = false;
             this._initGame();
         }
     }
@@ -224,6 +230,10 @@ class View {
     }
 
     _start() {
+        if (this._model.isFirstTime()) {
+            this._drawFirstTimeMessage();
+            return;
+        }
         this._timer = setInterval(() => {
             this._mainLoop();
         }, 1000 / 60);
@@ -284,6 +294,13 @@ class View {
         this._ctx.fillStyle = '#000';
         this._ctx.font = '10px sans-serif';
         this._ctx.fillText('ハイスコア: ' + this._model.getHighScore(), 5, 50);
+    }
+
+    _drawFirstTimeMessage() {
+        this._ctx.font = '20px sans-serif';
+        this._ctx.fillStyle = '#f00';
+        this._ctx.strokeStyle = '#000';
+        this._fillTextCenter('スペースキーでスタート', 150);
     }
 
     _drawRestartMessage() {
