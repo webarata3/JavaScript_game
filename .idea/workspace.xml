@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b208c91-a697-4053-9872-c131fac3b3e2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/tamayoke3/t/tamayoke.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tamayoke3/t/tamayoke.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/tamayoke3/t/tamayoke.js" afterPath="$PROJECT_DIR$/tamayoke3/t/tamayoke.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,8 +20,8 @@
       <file leaf-file-name="tamayoke.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tamayoke3/t/tamayoke.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+            <state relative-caret-position="115">
+              <caret line="255" column="37" lean-forward="false" selection-start-line="255" selection-start-column="34" selection-end-line="255" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -41,8 +40,8 @@
       <file leaf-file-name="tamayoke.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tamayoke2/t/tamayoke.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="124" selection-end-column="7" />
+            <state relative-caret-position="272">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="28" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -54,6 +53,9 @@
     <findStrings>
       <find>robot</find>
       <find>setinter</find>
+      <find>missile</find>
+      <find>score</find>
+      <find>speed</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -147,8 +149,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -240,12 +242,13 @@
       <workItem from="1513937779636" duration="1218000" />
       <workItem from="1514513050771" duration="7000" />
       <workItem from="1514513086231" duration="6945000" />
-      <workItem from="1514533767958" duration="3132000" />
+      <workItem from="1514533767958" duration="9961000" />
+      <workItem from="1514586600162" duration="4168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98845000" />
+    <option name="totallyTimeSpent" value="109842000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="451" y="24" width="1403" height="1000" extended-state="0" />
@@ -550,16 +553,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tamayoke2/t/tamayoke.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="124" selection-end-column="7" />
+        <state relative-caret-position="272">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="28" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tamayoke3/t/tamayoke.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+        <state relative-caret-position="115">
+          <caret line="255" column="37" lean-forward="false" selection-start-line="255" selection-start-column="34" selection-end-line="255" selection-end-column="37" />
           <folding />
         </state>
       </provider>
