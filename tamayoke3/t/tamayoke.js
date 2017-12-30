@@ -203,6 +203,12 @@ class Model {
     init() {
         this._initGame();
     }
+
+    restart() {
+        if (this._robot.isHit()) {
+            this._initGame();
+        }
+    }
 }
 
 class View {
@@ -313,7 +319,7 @@ class Controller {
         // 左37 右39
         switch (e.keyCode) {
             case 32:
-                this._model.init();
+                this._model.restart();
                 break;
             case 37:
                 this._model.releaseLeft();
