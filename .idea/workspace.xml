@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b208c91-a697-4053-9872-c131fac3b3e2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/tamayoke3/t/tamayoke.js" afterPath="$PROJECT_DIR$/tamayoke3/t/tamayoke.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,8 +20,8 @@
       <file leaf-file-name="tamayoke.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tamayoke3/t/tamayoke.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="223" column="14" lean-forward="false" selection-start-line="223" selection-start-column="14" selection-end-line="223" selection-end-column="14" />
+            <state relative-caret-position="145">
+              <caret line="303" column="32" lean-forward="false" selection-start-line="303" selection-start-column="32" selection-end-line="303" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -243,12 +244,12 @@
       <workItem from="1514513050771" duration="7000" />
       <workItem from="1514513086231" duration="6945000" />
       <workItem from="1514533767958" duration="9961000" />
-      <workItem from="1514586600162" duration="6229000" />
+      <workItem from="1514586600162" duration="7773000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111903000" />
+    <option name="totallyTimeSpent" value="113447000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="451" y="24" width="1403" height="1000" extended-state="0" />
@@ -561,8 +562,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tamayoke3/t/tamayoke.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="223" column="14" lean-forward="false" selection-start-line="223" selection-start-column="14" selection-end-line="223" selection-end-column="14" />
+        <state relative-caret-position="145">
+          <caret line="303" column="32" lean-forward="false" selection-start-line="303" selection-start-column="32" selection-end-line="303" selection-end-column="32" />
           <folding />
         </state>
       </provider>

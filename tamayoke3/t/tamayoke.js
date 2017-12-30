@@ -119,18 +119,6 @@ class Model {
     constructor(canvasWidth, canvasHeight) {
         this._canvasWidth = canvasWidth;
         this._canvasHeight = canvasHeight;
-
-        this._observers = [];
-    }
-
-    add(observer) {
-        this._observers.push(observer);
-    }
-
-    _notifyAll() {
-        for (const observer of this._observers) {
-            observer.update();
-        }
     }
 
     _initGame() {
@@ -145,7 +133,8 @@ class Model {
         this._score = 0;
         Missile.speed = Missile.INIT_SPEED;
 
-        this._notifyAll();
+        const event = new Event('start');
+        document.dispatchEvent(event);
     }
 
     getRobot() {
@@ -202,7 +191,7 @@ class Model {
         return this._robot.isHit();
     }
 
-    start() {
+    init() {
         this._initGame();
     }
 }
@@ -213,9 +202,13 @@ class View {
         this._ctx = this._canvas.getContext('2d');
 
         this._model = model;
+
+        document.addEventListener('start', () => {
+            this.start();
+        });
     }
 
-    update() {
+    start() {
         this._timer = setInterval(() => {
             this._mainLoop();
         }, 1000 / 60);
@@ -293,8 +286,8 @@ class Controller {
     constructor(canvasId, canvasWidth, canvasHeight) {
         this._model = new Model(canvasWidth, canvasHeight);
         this._view = new View(canvasId, this._model);
-        this._model.add(this._view);
-        this._model.start();
+
+        this._model.init();
 
         window.addEventListener('keyup', e => {
             this._keyup(e)
@@ -308,7 +301,7 @@ class Controller {
         // 左37 右39
         switch (e.keyCode) {
             case 32:
-                this._model.start();
+                this._model.init();
                 break;
             case 37:
                 this._model.releaseLeft();
