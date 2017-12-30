@@ -63,6 +63,10 @@ class Robot {
     isHit() {
         return this._hit;
     }
+
+    resetHit() {
+        this._hit = false;
+    }
 }
 
 Robot.WIDTH = 30;
@@ -116,7 +120,23 @@ class Model {
         this._canvasWidth = canvasWidth;
         this._canvasHeight = canvasHeight;
 
+        this._observers = [];
+    }
+
+    add(observer) {
+        this._observers.push(observer);
+    }
+
+    _notifyAll() {
+        for (const observer of this._observers) {
+            observer.update();
+        }
+    }
+
+    _initGame() {
         this._robot = new Robot(this._canvasWidth, this._canvasHeight);
+        this._robot.resetHit();
+
         this._missiles = [];
         for (let i = 0; i < Missile.NUM; i++) {
             this._missiles[i] = new Missile(this._canvasWidth, this._canvasHeight, -i * (Missile.HEIGHT + 40));
@@ -124,6 +144,8 @@ class Model {
 
         this._score = 0;
         Missile.speed = Missile.INIT_SPEED;
+
+        this._notifyAll();
     }
 
     getRobot() {
@@ -179,6 +201,10 @@ class Model {
     isHit() {
         return this._robot.isHit();
     }
+
+    start() {
+        this._initGame();
+    }
 }
 
 class View {
@@ -189,14 +215,13 @@ class View {
         this._model = model;
     }
 
-    start() {
+    update() {
         this._timer = setInterval(() => {
-            this._update();
+            this._mainLoop();
         }, 1000 / 60);
-
     }
 
-    _update() {
+    _mainLoop() {
         this._main();
         this._draw();
     }
@@ -268,6 +293,8 @@ class Controller {
     constructor(canvasId, canvasWidth, canvasHeight) {
         this._model = new Model(canvasWidth, canvasHeight);
         this._view = new View(canvasId, this._model);
+        this._model.add(this._view);
+        this._model.start();
 
         window.addEventListener('keyup', e => {
             this._keyup(e)
@@ -275,13 +302,14 @@ class Controller {
         window.addEventListener('keydown', e => {
             this._keydown(e)
         });
-
-        this._view.start();
     }
 
     _keyup(e) {
         // 左37 右39
         switch (e.keyCode) {
+            case 32:
+                this._model.start();
+                break;
             case 37:
                 this._model.releaseLeft();
                 break;
