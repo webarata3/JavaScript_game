@@ -119,6 +119,8 @@ class Model {
     constructor(canvasWidth, canvasHeight) {
         this._canvasWidth = canvasWidth;
         this._canvasHeight = canvasHeight;
+
+        this._highScore = 0;
     }
 
     _initGame() {
@@ -169,11 +171,18 @@ class Model {
         return this._score;
     }
 
+    getHighScore() {
+        return this._highScore;
+    }
+
     moveMissiles() {
         for (const missile of this._missiles) {
             // ミサイルが最下部まで行ったら得点を1足す
             if (missile.move()) {
                 this._score = this._score + 1;
+                if (this._score > this._highScore) {
+                    this._highScore = this._score;
+                }
                 if (this._score % 10 === 0) {
                     Missile.speed = Missile.speed * Missile.INCREASE_SPEED;
                 }
@@ -204,11 +213,11 @@ class View {
         this._model = model;
 
         document.addEventListener('start', () => {
-            this.start();
+            this._start();
         });
     }
 
-    start() {
+    _start() {
         this._timer = setInterval(() => {
             this._mainLoop();
         }, 1000 / 60);
@@ -237,7 +246,6 @@ class View {
 
             this._drawRestartMessage();
         }
-
     }
 
     _clearCanvas() {
@@ -266,6 +274,10 @@ class View {
         this._ctx.fillStyle = '#000';
         this._ctx.font = '10px sans-serif';
         this._ctx.fillText('スコア: ' + this._model.getScore(), 5, 30);
+
+        this._ctx.fillStyle = '#000';
+        this._ctx.font = '10px sans-serif';
+        this._ctx.fillText('ハイスコア: ' + this._model.getHighScore(), 5, 50);
     }
 
     _drawRestartMessage() {
