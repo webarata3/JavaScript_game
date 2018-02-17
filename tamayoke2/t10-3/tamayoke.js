@@ -19,7 +19,7 @@ const INIT_MISSILE_SPEED = 3;
 let missileSpeed;
 const INCREASE_MISSILE_SPEED = 1.05;
 
-let hit = false;
+let hit = true;
 
 let cureItem;
 let timeCount;
@@ -86,27 +86,6 @@ class Robot {
     }
 }
 
-class Missile {
-    constructor(order) {
-        this.width = 5;
-        this.height = 20;
-        this.x = random(canvasWidth - this.width);
-        this.y = -order * (this.height + 50);
-    }
-
-    move() {
-        this.y = this.y + missileSpeed;
-        if (this.y > canvasHeight) {
-            this.x = random(canvasWidth - this.width);
-            this.y = -this.height - random(20);
-            score = score + 1;
-            if (score % 10 === 0) {
-                missileSpeed = missileSpeed * INCREASE_MISSILE_SPEED;
-            }
-        }
-    }
-}
-
 class CureItem {
     constructor() {
         this.width = 10;
@@ -127,6 +106,27 @@ class CureItem {
         this.y = this.y + this.speed;
         if (this.y > canvasHeight) {
             this.display = false;
+        }
+    }
+}
+
+class Missile {
+    constructor(order) {
+        this.width = 5;
+        this.height = 20;
+        this.x = random(canvasWidth - this.width);
+        this.y = -order * (this.height + 50);
+    }
+
+    move() {
+        this.y = this.y + missileSpeed;
+        if (this.y > canvasHeight) {
+            this.x = random(canvasWidth - this.width);
+            this.y = -this.height - random(20);
+            score = score + 1;
+            if (score % 10 === 0) {
+                missileSpeed = missileSpeed * INCREASE_MISSILE_SPEED;
+            }
         }
     }
 }

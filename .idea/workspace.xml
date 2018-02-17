@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8b208c91-a697-4053-9872-c131fac3b3e2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/tamayoke3/t/tamayoke.js" afterPath="$PROJECT_DIR$/tamayoke3/t/tamayoke.js" />
+      <change beforePath="$PROJECT_DIR$/tamayoke2/t/tamayoke.js" afterPath="$PROJECT_DIR$/tamayoke2/t/tamayoke.js" />
+      <change beforePath="$PROJECT_DIR$/tamayoke2/t07/tamayoke.html" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,38 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tamayoke.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tamayoke3/t/tamayoke.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="213" column="36" lean-forward="false" selection-start-line="213" selection-start-column="36" selection-end-line="213" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tamayoke.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tamayoke3/t/tamayoke.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tamayoke.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tamayoke2/t/tamayoke.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="170" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -129,8 +99,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="451" />
-    <option name="y" value="24" />
+    <option name="x" value="367" />
+    <option name="y" value="27" />
     <option name="width" value="1403" />
     <option name="height" value="1000" />
   </component>
@@ -150,8 +120,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -162,18 +130,14 @@
             <path>
               <item name="JavaScript_game" type="b2602c69:ProjectViewProjectNode" />
               <item name="JavaScript_game" type="462c0819:PsiDirectoryNode" />
-              <item name="tamayoke3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaScript_game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaScript_game" type="462c0819:PsiDirectoryNode" />
-              <item name="tamayoke3" type="462c0819:PsiDirectoryNode" />
-              <item name="t" type="462c0819:PsiDirectoryNode" />
+              <item name="tamayoke2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -184,15 +148,15 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game\tamayoke2" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game\tamayoke2" />
+      <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game" />
       <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game\canvas" />
       <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game\paint" />
       <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game\tamayoke\t02" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\arata\Dropbox\Windows\dev\ws\JavaScript_game\tamayoke2" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -244,18 +208,20 @@
       <workItem from="1514513050771" duration="7000" />
       <workItem from="1514513086231" duration="6945000" />
       <workItem from="1514533767958" duration="9961000" />
-      <workItem from="1514586600162" duration="10526000" />
+      <workItem from="1514586600162" duration="11569000" />
+      <workItem from="1518424250189" duration="10000" />
+      <workItem from="1518424314941" duration="609000" />
+      <workItem from="1518909344328" duration="170000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116200000" />
+    <option name="totallyTimeSpent" value="118032000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="451" y="24" width="1403" height="1000" extended-state="0" />
-    <editor active="true" />
+    <frame x="367" y="27" width="1403" height="1000" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24945927" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24945927" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -540,7 +506,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="53">
           <caret line="120" column="19" lean-forward="false" selection-start-line="120" selection-start-column="19" selection-end-line="120" selection-end-column="19" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tamayoke2/t/tamayoke.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2890">
+          <caret line="170" column="0" lean-forward="false" selection-start-line="167" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tamayoke3/t/tamayoke.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -548,23 +527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tamayoke2/t/tamayoke.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="170" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tamayoke3/t/tamayoke.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="213" column="36" lean-forward="false" selection-start-line="213" selection-start-column="36" selection-end-line="213" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>

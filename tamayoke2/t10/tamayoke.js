@@ -19,11 +19,6 @@ const INIT_MISSILE_SPEED = 3;
 let missileSpeed;
 const INCREASE_MISSILE_SPEED = 1.05;
 
-let hit = false;
-
-let cureItem;
-let timeCount;
-
 function random(num) {
     return Math.floor(Math.random() * num);
 }
@@ -68,20 +63,7 @@ class Robot {
                 || (this.y > missile.y + missile.height
                     || this.y + this.height < missile.y))) {
             missile.hit = true;
-            hit = true;
             this.hp = this.hp - 1;
-        }
-    }
-
-    checkCure(cureItem) {
-        if (!cureItem.display) return;
-
-        if (!((this.x > cureItem.x + cureItem.width
-                || this.x + this.width < cureItem.x)
-                || (this.y > cureItem.y + cureItem.height
-                    || this.y + this.height < cureItem.y))) {
-            cureItem.display = false;
-            this.hp = this.hp + 1;
         }
     }
 }
@@ -107,30 +89,6 @@ class Missile {
     }
 }
 
-class CureItem {
-    constructor() {
-        this.width = 10;
-        this.height = 10;
-        this.speed = 8;
-        this.display = false;
-    }
-
-    displayItem() {
-        this.display = true;
-        this.x = random(canvasWidth - this.width);
-        this.y = -this.height;
-    }
-
-    move() {
-        if (!this.display) return;
-
-        this.y = this.y + this.speed;
-        if (this.y > canvasHeight) {
-            this.display = false;
-        }
-    }
-}
-
 function init() {
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
@@ -143,8 +101,6 @@ function init() {
 
 function initGame() {
     score = 0;
-    timeCount = 0;
-
     missileSpeed = INIT_MISSILE_SPEED;
 
     robot = new Robot();
@@ -152,8 +108,6 @@ function initGame() {
     for (let i = 0; i < MISSILE_NUM; i++) {
         missiles[i] = new Missile(i);
     }
-
-    cureItem = new CureItem();
 
     registerEvent();
 
@@ -193,20 +147,12 @@ function registerEvent() {
 }
 
 function mainLoop() {
-    timeCount++;
-
     robot.move();
 
     missiles.forEach(function(missile) {
         missile.move();
         robot.checkHit(missile);
     });
-
-    if (timeCount % 300 === 0) {
-        cureItem.displayItem();
-    }
-    cureItem.move();
-    robot.checkCure(cureItem);
 
     if (score > highScore) {
         highScore = score;
@@ -216,14 +162,8 @@ function mainLoop() {
 }
 
 function draw() {
-    if (hit) {
-        ctx.fillStyle = '#f88';
-        ctx.fillRect(0, 0, canvasWidth, canvasHeight);
-        hit = false;
-    } else {
-        ctx.fillStyle = '#fff';
-        ctx.fillRect(0, 0, canvasWidth, canvasHeight);
-    }
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(0, 0, canvasWidth, canvasHeight);
 
     ctx.fillStyle = '#000';
     ctx.font = '10px sans-serif';
@@ -242,14 +182,8 @@ function draw() {
 
     ctx.fillStyle = '#f00';
     missiles.forEach(function(missile) {
-        if (missile.hit) return;
         ctx.fillRect(missile.x, missile.y, missile.width, missile.height);
     });
-
-    if (cureItem.display) {
-        ctx.fillStyle = '#0f0';
-        ctx.fillRect(cureItem.x, cureItem.y, cureItem.width, cureItem.height);
-    }
 
     if (robot.hp <= 0) {
         clearInterval(timer);
